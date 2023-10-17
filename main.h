@@ -14,8 +14,7 @@ typedef struct print_func
 {
 	char spec;
 	int (*f)(va_list args);
-}
-print_func_t;
+}print_func_t;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
@@ -34,5 +33,8 @@ int print_reverse(va_list args);
 int print_rot13(va_list args);
 int _strlen(char *str);
 void print_number(int n);
+int get_format_index(char c);
+int print_integer(va_list args);
+extern print_func_t print_funcs[];
 
 #endif

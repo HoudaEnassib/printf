@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_string - Print a string.
  * @args: A va_list containing the string to be printed.
@@ -7,10 +8,13 @@
  */
 int print_string(va_list args)
 {
-	char *str = va_arg(args, char *);
+	int i;
+	char *str;
 
-	if (!str)
-		return (write(1, "(null)", 6));
-
-	return (write(1, str, _strlen(str)));
+	str = va_arg(args, char *);
+	if (str == NULL)
+		str = "(null)";
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
 }

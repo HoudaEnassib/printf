@@ -1,5 +1,4 @@
 #include "main.h"
-#define PRINTF_BUF_SIZE 1024
 
 /**
  * _printf - Custom printf function that prints
@@ -13,9 +12,9 @@
 
 int _printf(const char *format, ...)
 {
+
 	va_list args;
 	int count = 0;
-	char buffer[PRINTF_BUF_SIZE];
 	int i = 0;
 	int index;
 
