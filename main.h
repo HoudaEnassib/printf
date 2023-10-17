@@ -1,22 +1,38 @@
-# ifndef MAIN_H
-# define MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
 
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
+#include <stdarg.h>
+#include <stdlib.h>
 
-# define S_BASE_16 "0123456789abcdef"
-# define B_BASE_16 "0123456789ABCDEF"
+/**
+ * struct print_func - struct for format specifiers
+ * @spec: The format specifier
+ * @f: The function to handle the specifier
+ */
 
-int _printf(const char *s, ...);
-int task_distributor(va_list ap, char c);
+typedef struct print_func
+{
+	char spec;
+	int (*f)(va_list args);
+}
+print_func_t;
 
-int _putaddress(void *addr);
-int _put_intnbr(int n);
-int _put_unint(unsigned int n);
-int _put_hex(unsigned int num, int flag);
+int _printf(const char *format, ...);
 int _putchar(char c);
-int _putstr(char *s);
-char *ft_itoa_hex(unsigned long n, int flag);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(va_list args);
+int print_integer(va_list args);
+int print_binary(va_list args);
+int print_unsigned(va_list args);
+int print_octal(va_list args);
+int print_hex(va_list args);
+int print_hex_upper(va_list args);
+int print_pointer(va_list args);
+int print_string_upper(va_list args);
+int print_reverse(va_list args);
+int print_rot13(va_list args);
+int _strlen(char *str);
+void print_number(int n);
 
 #endif
