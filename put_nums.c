@@ -7,9 +7,9 @@
  * Return: The number of digits in the integer.
  */
 
-static int	count_int(long num)
+static int count_int(long num)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	while (num)
@@ -28,7 +28,7 @@ static int	count_int(long num)
  * Return: The number of characters written.
  */
 
-int	_put_intnbr(int n)
+int _put_intnbr(int n)
 {
 	int count;
 	long num;
@@ -64,9 +64,9 @@ int	_put_intnbr(int n)
  * Return: The number of characters written.
  */
 
-int	_put_unint(unsigned int n)
+int _put_unint(unsigned int n)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	if (n < 10)

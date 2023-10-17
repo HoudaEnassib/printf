@@ -9,11 +9,11 @@
  * Return: The number of characters written.
  */
 
-int	_putaddress(void *addr)
+int _putaddress(void *addr)
 {
-	unsigned long	num;
-	int				i;
-	char			*str;
+	unsigned long num;
+	int i;
+	char *str;
 
 	num = (unsigned long)addr;
 	i = 0;
@@ -21,6 +21,7 @@ int	_putaddress(void *addr)
 	str = ft_itoa_hex(num, 0);
 	i += _putstr(str);
 	free(str);
+
 	return (i);
 }
 
@@ -35,10 +36,10 @@ int	_putaddress(void *addr)
  * Return: The number of characters written.
  */
 
-int	_put_hex(unsigned int num, int flag)
+int _put_hex(unsigned int num, int flag)
 {
-	int		i;
-	char	*str;
+	int i;
+	char *str;
 
 	i = 0;
 	str = ft_itoa_hex(num, flag);

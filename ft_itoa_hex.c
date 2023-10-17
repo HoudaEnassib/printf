@@ -7,9 +7,9 @@
  * Return: The length of the hexadecimal representation.
  */
 
-static int	len_calculator(unsigned long long n)
+static int len_calculator(unsigned long long n)
 {
-	int	len;
+	int len;
 
 	len = 0;
 	if (n == 0)

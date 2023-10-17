@@ -7,9 +7,9 @@
  * Return: The number of characters written (excluding the null-terminator).
  */
 
-int	_putstr(char *s)
+int _putstr(char *s)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	if (!s)
