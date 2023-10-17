@@ -1,40 +1,50 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <unistd.h>
 #include <stdarg.h>
-#include <stdlib.h>
 
 /**
- * struct print_func - struct for format specifiers
- * @spec: The format specifier
- * @f: The function to handle the specifier
+ * struct format_spec - defines a structure for symbols and functions
+ *
+ * @c: The associated character
+ * @f: The associated function
  */
-
-typedef struct print_func
+typedef struct format_spec
 {
-	char spec;
-	int (*f)(va_list args);
-}print_func_t;
+	char *c;
+	int (*f)(va_list);
+} form_spec;
 
-int _printf(const char *format, ...);
-int _putchar(char c);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_percent(va_list args);
-int print_integer(va_list args);
-int print_binary(va_list args);
-int print_unsigned(va_list args);
-int print_octal(va_list args);
-int print_hex(va_list args);
-int print_hex_upper(va_list args);
-int print_pointer(va_list args);
-int print_string_upper(va_list args);
-int print_reverse(va_list args);
-int print_rot13(va_list args);
-int _strlen(char *str);
-void print_number(int n);
-int get_format_index(char c);
-int print_integer(va_list args);
-extern print_func_t print_funcs[];
+/* _putchar.c */
+int _putchar(char);
+
+/* _printf */
+int _printf(const char *, ...);
+int printer(const char *, form_spec *, va_list);
+
+/* specifier functions */
+int print_char(va_list);
+int print_str(va_list);
+int print_percent(va_list);
+int print_int(va_list);
+int print_unsigned(va_list);
+int print_bin(va_list);
+int print_rev(va_list);
+int print_rot13(va_list);
+int print_STR(va_list);
+int print_addr(va_list);
+int print_oct(va_list);
+int print_hex(va_list);
+int print_HEX(va_list);
+
+/* helper functions */
+int print_string(char *);
+int print_binary(unsigned int);
+int print_number(unsigned int);
+int print_hexadecimal(unsigned long int, int, int);
+int print_octal(unsigned int);
+
+/* specifier handlers / extras */
 
 #endif
