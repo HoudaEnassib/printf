@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <limits.h>
 
 print_func_t print_funcs[] = {
 	{'c', print_char},
@@ -30,6 +32,9 @@ int main(void)
 	int len2;
 	unsigned int ui;
 	void *addr;
+	char *str;
+	char *rev_str;
+	char *rot13_str;
 
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -61,17 +66,17 @@ int main(void)
 	_printf("Binary:[%b]\n", 98);
 	printf("Binary:[%d]\n", 98);
 
-	char *str = "Hello, ALX";
+	str = "Hello, ALX";
 
 	_printf("String Upper:[%S]\n", str);
 	printf("String Upper:[%s]\n", str);
 
-	char *rev_str = "Reverse This";
+	rev_str = "Reverse This";
 
 	_printf("Reverse:[%r]\n", rev_str);
 	printf("Reverse:[%s]\n", rev_str);
 
-	char *rot13_str = "Rot13 This";
+	rot13_str = "Rot13 This";
 
 	_printf("Rot13:[%R]\n", rot13_str);
 	printf("Rot13:[%s]\n", rot13_str);
