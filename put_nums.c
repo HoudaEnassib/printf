@@ -57,7 +57,8 @@ int	_put_intnbr(int n)
 }
 
 /**
- * _put_unint - Custom function to write an unsigned integer to the standard output.
+ * _put_unint - Custom function to write
+ * an unsigned integer to the standard output.
  * @n: The unsigned integer to be written.
  *
  * Return: The number of characters written.
