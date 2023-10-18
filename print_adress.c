@@ -8,11 +8,10 @@
  * Return: The number of characters printed.
  */
 
-int print_addr²(va_list args)
+int print_addr(va_list args)
 {
 	unsigned long int value = va_arg(args, unsigned long int);
 	int count = 0;
-
 
 	if (!value)
 	{

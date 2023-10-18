@@ -7,7 +7,6 @@
  *
  * Return: The number of characters printed.
  */
-
 int print_hex(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);

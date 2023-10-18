@@ -50,11 +50,9 @@ int _printf(const char *format, ...)
  *
  * Return: The count of characters printed.
  */
-
 int printer(const char *format, form_spec specifiers[], va_list args)
 {
-	int i = 0, j;
-	int char_count = 0, checker;
+	int i = 0, j, char_count = 0, checker;
 
 	while (format[i])
 	{
