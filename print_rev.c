@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_reverse - takes a pointer to a string
+ * print_rev - takes a pointer to a string
  * and prints the string in reverse order.
  *
  * @args: Pointer to the string to be printed in reverse.
@@ -9,7 +9,7 @@
  * Return: The number of characters printed.
  */
 
-int print_reverse(va_list args)
+int print_rev(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0, count = 0;
@@ -32,4 +32,3 @@ int print_reverse(va_list args)
 
 	return (count);
 }
-
