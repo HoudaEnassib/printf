@@ -35,7 +35,7 @@ int print_address(va_list);
 int print_oct(va_list);
 int print_hexa(va_list);
 int print_HEX(va_list);
-
+int print_string(va_list args);
 int print_string(char *str);
 int print_binary(unsigned int);
 int print_number(unsigned int);
