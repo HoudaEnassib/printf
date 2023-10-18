@@ -2,31 +2,32 @@
 
 /**
  * print_rev - prints a string in reverse
- * @args: argument pointer
+ *
+ * @ar: argument pointer
+ *
  * Return: number of characters printed
  */
 
-int print_rev(va_list args)
+int print_rev(va_list ar)
 {
-	char *str = va_arg(args, char *);
-	int len = 0, count = 0;
+	char *s = va_arg(ar, char *);
+	int l = 0, c = 0;
 
-	if (!str)
+	if (!s)
 		return (-1);
 
-	while (*str)
+	while (*s)
 	{
-		str++;
-		len++;
+		s++;
+		l++;
 	}
 
-	while (len > 0)
+	while (l > 0)
 	{
-		str--;
-		count += _putchar(*str);
-		len--;
+		s--;
+		c += _putchar(*s);
+		l--;
 	}
 
-	return (count);
+	return (c);
 }
-

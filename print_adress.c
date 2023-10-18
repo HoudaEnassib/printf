@@ -3,23 +3,23 @@
 /**
  * print_addr - Prints a memory address in hexadecimal format.
  *
- * @args: A pointer to the memory address to be printed.
+ * @ar: A pointer to the memory address to be printed.
  *
  * Return: The number of characters printed.
  */
 
-int print_addr(va_list args)
+int print_addr(va_list ar)
 {
-	unsigned long int value = va_arg(args, unsigned long int);
-	int count = 0;
+	unsigned long int vl = va_arg(ar, unsigned long int);
+	int c = 0;
 
-	if (!value)
+	if (!vl)
 	{
 		return (print_string("(nil)"));
 	}
 
-	count += print_string("0x");
-	count += print_hexadecimal(value, 1, 0);
+	c += print_string("0x");
+	c += print_hexadecimal(vl, 1, 0);
 
-	return (count);
+	return (c);
 }

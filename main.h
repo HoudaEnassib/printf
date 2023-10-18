@@ -10,6 +10,7 @@
  * @c: The associated character
  * @f: The associated function
  */
+
 typedef struct format_spec
 {
 	char *c;
@@ -17,34 +18,32 @@ typedef struct format_spec
 } form_spec;
 
 /* _putchar.c */
-int _putchar(char);
+int _putchar(char c);
 
 /* _printf */
-int _printf(const char *, ...);
-int printer(const char *, form_spec *, va_list);
+int _printf(const char *format, ...);
+int printer(const char *format, form_spec specifiers[], va_list ar);
 
 /* specifier functions */
-int print_char(va_list);
-int print_str(va_list);
-int print_percent(va_list);
-int print_int(va_list);
-int print_unsigned(va_list);
-int print_bin(va_list);
-int print_rev(va_list);
-int print_rot13(va_list);
-int print_STR(va_list);
-int print_addr(va_list);
-int print_oct(va_list);
-int print_hex(va_list);
-int print_HEX(va_list);
+int print_char(va_list ar);
+int print_str(va_list ar);
+int print_percent(__attribute__((unused))va_list ar);
+int print_int(va_list ar);
+int print_unsigned(va_list ar);
+int print_bin(va_list ar);
+int print_rev(va_list ar);
+int print_rot13(va_list ar);
+int print_STR(va_list ar);
+int print_addr(va_list ar);
+int print_oct(va_list ar);
+int print_hex(va_list ar);
+int print_HEX(va_list ar);
 
 /* helper functions */
-int print_string(char *);
-int print_binary(unsigned int);
-int print_number(unsigned int);
-int print_hexadecimal(unsigned long int, int, int);
-int print_octal(unsigned int);
-
-/* specifier handlers / extras */
+int print_string(char *s);
+int print_binary(unsigned int vl);
+int print_number(unsigned int vl);
+int print_hexadecimal(unsigned long int vl, int pr, int cp);
+int print_octal(unsigned int vl);
 
 #endif

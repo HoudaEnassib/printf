@@ -2,35 +2,37 @@
 
 /**
  * print_rot13 - prints a string in rot13 format
- * @args: argument pointer
+ *
+ * @ar: argument pointer
+ *
  * Return: number of characters printed
  */
 
-int print_rot13(va_list args)
+int print_rot13(va_list ar)
 {
-	char *str = va_arg(args, char *);
-	int i, count = 0;
+	char *s = va_arg(ar, char *);
+	int i, c = 0;
 
-	if (!str)
+	if (!s)
 		return (-1);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; s[i]; i++)
 	{
-		if ((str[i] >= 'a' && str[i] <= 'm') ||
-			(str[i] >= 'A' && str[i] <= 'M'))
+		if ((s[i] >= 'a' && s[i] <= 'm') ||
+			(s[i] >= 'A' && s[i] <= 'M'))
 		{
-			count += _putchar(str[i] + 13);
+			c += _putchar(s[i] + 13);
 		}
-		else if ((str[i] >= 'n' && str[i] <= 'z') ||
-			(str[i] >= 'N' && str[i] <= 'Z'))
+		else if ((s[i] >= 'n' && s[i] <= 'z') ||
+			(s[i] >= 'N' && s[i] <= 'Z'))
 		{
-			count += _putchar(str[i] - 13);
+			c += _putchar(s[i] - 13);
 		}
 		else
 		{
-			count += _putchar(str[i]);
+			c += _putchar(s[i]);
 		}
 	}
 
-	return (count);
+	return (c);
 }

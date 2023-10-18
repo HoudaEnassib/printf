@@ -4,33 +4,33 @@
  * print_STR - Prints a string, replacing non-printable
  * characters with hexadecimal representation.
  *
- * @args: A pointer to the string to be printed with
+ * @ar: A pointer to the string to be printed with
  * non-printable characters replaced.
  *
  * Return: The number of characters printed.
  */
 
-int print_STR(va_list args)
+int print_STR(va_list ar)
 {
-	char *str = va_arg(args, char *);
-	int i, count = 0;
+	char *s = va_arg(ar, char *);
+	int i, c = 0;
 
-	if (!str)
+	if (!s)
 		return (-1);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; s[i]; i++)
 	{
-		if (str[i] < 32 || str[i] >= 127)
+		if (s[i] < 32 || s[i] >= 127)
 		{
-			count += _putchar('\\');
-			count += _putchar('x');
-			count += print_hexadecimal(str[i], 0, 1);
+			c += _putchar('\\');
+			c += _putchar('x');
+			c += print_hexadecimal(s[i], 0, 1);
 		}
 		else
 		{
-			count += _putchar(str[i]);
+			c += _putchar(s[i]);
 		}
 	}
 
-	return (count);
+	return (c);
 }

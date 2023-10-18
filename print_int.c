@@ -3,21 +3,21 @@
 /**
  * print_int - prints an integer
  *
- * @args: argument pointer
+ * @ar: argument pointer
  *
  * Return: number of digits printed
  */
 
-int print_int(va_list args)
+int print_int(va_list ar)
 {
-	int value = va_arg(args, int);
-	int len = 0;
+	int vl = va_arg(ar, int);
+	int l = 0;
 
-	if (value < 0)
+	if (vl < 0)
 	{
-		len += _putchar('-');
-		value *= -1;
+		l += _putchar('-');
+		vl *= -1;
 	}
 
-	return (len + print_number((unsigned int)value));
+	return (l + print_number((unsigned int)vl));
 }

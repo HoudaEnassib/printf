@@ -3,6 +3,7 @@
 
 /**
  * _putchar - Custom function to write a character to the standard output.
+ *
  * @c: The character to be written.
  *
  * Return: On success, returns the number of
@@ -12,5 +13,6 @@
 int _putchar(char c)
 {
 	write(1, &c, 1);
+
 	return (1);
 }

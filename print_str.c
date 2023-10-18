@@ -3,16 +3,16 @@
 /**
  * print_str - This function prints a string.
  *
- * @args: A pointer to the string to be printed.
+ * @ar: A pointer to the string to be printed.
  *
  * Return: The number of characters printed.
  */
 
-int print_str(va_list args)
+int print_str(va_list ar)
 {
-	char *str = va_arg(args, char *);
+	char *s = va_arg(ar, char *);
 
-	if (!str)
+	if (!s)
 		return (print_string("(null)"));
-	return (print_string(str));
+	return (print_string(s));
 }
