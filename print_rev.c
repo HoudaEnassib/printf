@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * print_reverse:  prints a string in reverse
+ * print_reverse - takes a pointer to a string
+ * and prints the string in reverse order.
  *
- * @args: argument pointer
+ * @args: Pointer to the string to be printed in reverse.
  *
- * Return: number of characters printed
+ * Return: The number of characters printed.
  */
 
 int print_reverse(va_list args)
