@@ -2,7 +2,9 @@
 
 /**
  * print_char - This function prints a character.
+ *
  * @args: A pointer to the character to be printed.
+ *
  * Return: The number of characters printed (always 1 in this case).
  */
 

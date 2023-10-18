@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_addr - Prints a memory address in hexadecimal format.
+ * print_address - Prints a memory address in hexadecimal format.
  *
  * @args: A pointer to the memory address to be printed.
  *
  * Return: The number of characters printed.
  */
 
-int print_addr(va_list args)
+int print_address(va_list args)
 {
 	unsigned long int value = va_arg(args, unsigned long int);
 	int count = 0;

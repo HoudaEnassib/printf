@@ -18,13 +18,13 @@ int _printf(const char *format, ...)
 		{"d", print_int},
 		{"i", print_int},
 		{"b", print_bin},
-		{"r", print_rev},
+		{"r", print_reverse},
 		{"R", print_rot13},
 		{"S", print_STR},
-		{"p", print_addr},
+		{"p", print_address},
 		{"u", print_unsigned},
 		{"o", print_oct},
-		{"x", print_hex},
+		{"x", print_hexa},
 		{"X", print_HEX},
 		{NULL, NULL}
 	};
@@ -50,9 +50,11 @@ int _printf(const char *format, ...)
  *
  * Return: The count of characters printed.
  */
+
 int printer(const char *format, form_spec specifiers[], va_list args)
 {
-	int i = 0, j, char_count = 0, checker;
+	int i = 0, j;
+	int char_count = 0, checker;
 
 	while (format[i])
 	{
