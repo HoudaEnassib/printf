@@ -117,6 +117,7 @@ int print_hexadecimal(unsigned long int value, int prefix, int caps)
  *
  * Return: The count of octal digits displayed.
  */
+
 int print_octal(unsigned int value)
 {
 	int count = 0;
