@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * print_rev - prints a string in reverse
+ * print_reverse:  prints a string in reverse
+ *
  * @args: argument pointer
+ *
  * Return: number of characters printed
  */
 
