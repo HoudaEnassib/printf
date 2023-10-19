@@ -17,14 +17,12 @@ typedef struct format_spec
 	int (*f)(va_list);
 } form_spec;
 
-/* _putchar.c */
+
 int _putchar(char c);
 
-/* _printf */
 int _printf(const char *format, ...);
 int printer(const char *format, form_spec specifiers[], va_list ar);
 
-/* specifier functions */
 int print_char(va_list ar);
 int print_str(va_list ar);
 int print_percent(__attribute__((unused))va_list ar);
@@ -39,7 +37,6 @@ int print_oct(va_list ar);
 int print_hex(va_list ar);
 int print_HEX(va_list ar);
 
-/* helper functions */
 int print_string(char *s);
 int print_binary(unsigned int vl);
 int print_number(unsigned int vl);
