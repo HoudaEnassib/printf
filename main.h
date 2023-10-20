@@ -38,6 +38,8 @@ int print_oct(va_list ar);
 int print_hex(va_list ar);
 int print_HEX(va_list ar);
 
+int _digit(char c);
+
 int print_string(char *s);
 int print_binary(unsigned int vl);
 int print_number(unsigned int vl);
