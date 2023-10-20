@@ -34,14 +34,14 @@ int print_number(unsigned int vl)
  * Return: The count of characters displayed.
  */
 
-int print_string(va_list ar)
+int print_string(char *s)
 {
 	int l = 0;
 
-	while (*ar)
+	while (*s)
 	{
-		l += _putchar(*ar);
-		ar++;
+		l += _putchar(*s);
+		s++;
 	}
 	return (l);
 }
