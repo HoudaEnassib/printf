@@ -34,7 +34,7 @@ int print_number(unsigned int vl)
  * Return: The count of characters displayed.
  */
 
-int print_string(char *s)
+int print_string(va_list ar)
 {
 	int l = 0;
 

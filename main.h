@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <limits.h>
 #include <unistd.h>
 #include <stdarg.h>
 
@@ -37,7 +38,7 @@ int print_oct(va_list ar);
 int print_hex(va_list ar);
 int print_HEX(va_list ar);
 
-int print_string(char *s);
+int print_string(char *);
 int print_binary(unsigned int vl);
 int print_number(unsigned int vl);
 int print_hexadecimal(unsigned long int vl, int pr, int cp);
