@@ -38,10 +38,10 @@ int print_string(va_list ar)
 {
 	int l = 0;
 
-	while (*s)
+	while (*ar)
 	{
-		l += _putchar(*s);
-		s++;
+		l += _putchar(*ar);
+		ar++;
 	}
 	return (l);
 }
